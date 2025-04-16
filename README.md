@@ -25,5 +25,23 @@ A homework for web design, which is typically for accomplishing the task assigne
 3. https://soles-gaufrette.com/  
 **注**：这些网站水平比较高，仅作为参考不是说要复制（（，大概框架是这样。  
 
-## 页面详情
-待定
+## 文件目录结构
+
+    WEBDESIGNWORK/
+    ├── README.md               // 作业说明        
+    ├── pages/   
+    |   ├── index.html          // 首页 
+    |   ├── personal1.html      // 组员1的个人主页
+    |   ├── personal2.html      // 组员2的个人主页
+    |   ├── personal3.html      // 组员3的个人主页
+    |   └── personal4.html      // 组员4的个人主页
+    ├── css/
+    │   ├── reset.css           // 重置样式（可选）
+    │   └── style.css           // 全站公共样式
+    ├── js/
+    │   └── main.js             // 页面交互逻辑代码（如过滤、懒加载、灯箱、幻灯片等）
+    ├── images/
+    │   ├── gallery/            // 存放画廊中使用的图片
+    │   └── personal/           // 存放每个组员个人主页的头像或相关图片
+    └── assets/
+        └── fonts/              // 字体文件（如果有）
