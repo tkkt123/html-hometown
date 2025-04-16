@@ -26,6 +26,10 @@
 }
 
 section{
-    font-family: 'ShanHai';
+    font-family: 'ShanHai',sans-serif;
+}
+
+#site-header-search input[type="text"] , #site-header-search button{
+    font-family: 'SanJi', sans-serif;
 }
 

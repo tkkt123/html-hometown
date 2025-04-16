@@ -8,9 +8,7 @@ header#site-header{
     padding: 10px;                  /* 内边距 */
     border: 2px solid #ccc;       /* 添加边框，宽度，颜色，实线*/
     font-size: 1rem;                /* 字体大小*/
-    margin-right: calc(2vw);       /* 和页面的距离*/
-    margin-top: calc(2vw);       /* 和页面的距离*/
-    margin-left: calc(2vw);       /* 和页面的距离*/
+    margin :calc(2vw);              /*页边距*/
     width: 90%;
     z-index: 1000;              /*确保在所有页面之上*/
     background-color: rgb(226, 218, 208);
@@ -32,6 +30,7 @@ header#site-header a {
 
 #site-header-dropdown div {
     margin: 10px;          /* 去掉默认的外边距 */
+    padding :0;
 }
 
 
@@ -62,4 +61,32 @@ header#site-header a {
 }
 
 
+/* 搜索框样式 */
+#site-header-search {
+    display: flex;                  /* 使用 Flexbox 布局 */
+    justify-content: center;        /* 水平居中 */
+    align-items: center;            /* 垂直居中 */
+    margin: 10px 0;                 /* 上下间距 */
+    gap: 10px;                      /* 输入框和按钮之间的间距 */
+    width: 100%;
+    max-width: 500px;
+}
+#site-header-search input[type="text"] {
+    flex: 1;                        /* 输入框占据剩余空间 */
+    padding: 10px;                  /* 输入框内边距 */
+    font-size: 1rem;                /* 输入框字体大小 */
+    border: 1px solid #ccc;         /* 边框样式 */
+    min-width: 150px;               /* 设置输入框的最小宽度 */
+    color: black;
+}
 
+#site-header-search button {
+    padding: 10px 15px;             /* 按钮内边距 */
+    font-size: 1rem;                /* 按钮字体大小 */
+    background-color: #bace7f;      /* 按钮背景颜色 */
+    color: rgb(4, 4, 4);                   /* 按钮文字颜色 */
+    border: none;                   /* 去掉按钮边框 */
+    border-radius: 5px;             /* 圆角边框 */
+    cursor: pointer;                /* 鼠标悬停时显示手型 */
+    flex-shrink: 0;                 /* 防止按钮缩小 */
+}
