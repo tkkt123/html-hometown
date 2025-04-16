@@ -36,8 +36,9 @@ A homework for web design, which is typically for accomplishing the task assigne
     |   ├── personal3.html      // 组员3的个人主页
     |   └── personal4.html      // 组员4的个人主页
     ├── css/
-    │   ├── reset.css           // 重置样式（可选）
-    │   └── style.css           // 全站公共样式
+    │   ├── font.css           // 字体样式
+    │   ├── header.css         // 导航栏样式
+    │   └── section.css        // 板块样式
     ├── js/
     │   └── main.js             // 页面交互逻辑代码（如过滤、懒加载、灯箱、幻灯片等）
     ├── images/
@@ -46,5 +47,5 @@ A homework for web design, which is typically for accomplishing the task assigne
     │   ├── HuNan/              // 个人使用的图片
     │   ├── HuNan/              // 个人使用的图片
     │   └── SiChuan/            // 个人使用的图片
-    └── assets/
-        └── fonts/              // 字体文件（如果有）
+    └── assets/                 // 字体
+ 
