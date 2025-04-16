@@ -42,6 +42,9 @@ A homework for web design, which is typically for accomplishing the task assigne
     │   └── main.js             // 页面交互逻辑代码（如过滤、懒加载、灯箱、幻灯片等）
     ├── images/
     │   ├── gallery/            // 存放画廊中使用的图片
-    │   └── personal/           // 存放每个组员个人主页的头像或相关图片
+    │   ├── ChongQing/          // 个人使用的图片
+    │   ├── HuNan/              // 个人使用的图片
+    │   ├── HuNan/              // 个人使用的图片
+    │   └── SiChuan/            // 个人使用的图片
     └── assets/
         └── fonts/              // 字体文件（如果有）
