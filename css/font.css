@@ -1,0 +1,31 @@
+/* 设置了字体：三极花朝体 粗 */
+@font-face {
+    font-family: 'SanJi';
+    src: url('../asset/SanJiHuaChaoTi-Cu-2.ttf') format('truetype');
+}
+
+/* 设置了字体：青鸟华光繁行草 */
+@font-face {
+    font-family: 'QingNiao';
+    src: url('../asset/XiaoDouDaoMoMoZhiCaoShuJian-2.otf') format('truetype');
+}
+
+/* 山海汲古明刻 */
+@font-face {
+    font-family: 'ShanHai';
+    src: url('../asset/ShanHaiJiGuMingKe（YaZhiBan）-2.ttf') format('truetype');
+}
+
+/* 对导航栏使用这种字体 */
+.dropdown , .dropdown-ex {
+    font-family: 'SanJi', sans-serif;
+}
+
+#site-header-name a{
+    font-family: 'QingNiao', sans-serif;
+}
+
+section{
+    font-family: 'ShanHai';
+}
+

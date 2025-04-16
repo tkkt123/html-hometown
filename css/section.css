@@ -1,0 +1,13 @@
+#over_all_intro {
+    display: flex;            /* 使用 Flexbox 布局 */
+    justify-content: center;  /* 水平方向居中 */
+    align-items: center;      /* 垂直方向居中 */
+    height: 100vh;            /* 设置高度为视口高度 */
+}
+
+#over_all_intro h2 {
+    text-align: center;       /* 水平居中 */
+    font-size: 2rem;          /* 设置字体大小 */
+    font-weight: bold;        /* 加粗标题 */
+    margin: 0;                /* 去掉默认外边距 */
+}

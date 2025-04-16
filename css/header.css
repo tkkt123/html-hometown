@@ -1,0 +1,65 @@
+/* 页顶部导航栏样式 */
+header#site-header{
+    position: fixed;
+    display: flex;                  /* 页面布局*/
+    gap: 10px;                      /* 距离*/
+    justify-content: space-between; /* 标题和导航栏两端对齐 */
+    align-items: center;            /* 垂直居中对齐 */
+    padding: 10px;                  /* 内边距 */
+    border: 2px solid #ccc;       /* 添加边框，宽度，颜色，实线*/
+    font-size: 1rem;                /* 字体大小*/
+    margin-right: calc(2vw);       /* 和页面的距离*/
+    margin-top: calc(2vw);       /* 和页面的距离*/
+    margin-left: calc(2vw);       /* 和页面的距离*/
+    width: 90%;
+    z-index: 1000;              /*确保在所有页面之上*/
+    background-color: rgb(226, 218, 208);
+}
+
+/* 导航栏超链接 */
+header#site-header a {
+    text-decoration: none;  /* 去掉超链接的下划线*/
+    color:black;
+    position: relative; /*伪元素定位*/
+}
+
+
+/* 导航栏每一项的样式 */
+#site-header-dropdown{
+    display: flex; 
+    gap: calc(5vw);
+}
+
+#site-header-dropdown div {
+    margin: 10px;          /* 去掉默认的外边距 */
+}
+
+
+/* 城市名称样式 */
+#site-header-dropdown .dropdown {
+    font-size: 2rem;        /* 城市名称字体变大 */
+    font-weight: bold;      /* 加粗城市名称 */
+    text-align: center;     /* 水平居中对齐 */
+    margin: 0;              /* 去掉默认外边距 */
+    padding: 0;
+}
+
+/* 城市描述文字样式 */
+#site-header-dropdown .dropdown-ex {
+    font-size: 1rem;        /* 描述文字字体变小 */
+    color: #888;          /* 描述文字颜色变浅 */
+    text-align: center;     /* 水平居中对齐 */
+    margin: 0;              /* 去掉默认外边距 */
+    padding: 0;
+}
+
+/* 大标题 */
+#site-header-name {
+    margin: 0;          /* 去掉默认的外边距 */
+    font-size: 3rem;
+    padding-left: calc(2vw); /* vw是页面长度的1%，根据视口宽度动态调整左内边距 */
+    text-align: center;
+}
+
+
+
