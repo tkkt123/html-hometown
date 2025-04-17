@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
       slides[currentSlide].classList.add('active');
     }
   
-    setInterval(nextSlide, 4000);
+    setInterval(nextSlide, 5000);
   });
