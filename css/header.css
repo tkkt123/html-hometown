@@ -6,21 +6,20 @@ header#site-header{
     justify-content: space-between; /* 标题和导航栏两端对齐 */
     align-items: center;            /* 垂直居中对齐 */
     padding: 10px;                  /* 内边距 */
-    border: 2px solid #ccc;       /* 添加边框，宽度，颜色，实线*/
+    border: 2px solid #bfbebe;       /* 添加边框，宽度，颜色，实线*/
     font-size: 1rem;                /* 字体大小*/
     margin :calc(2vw);              /*页边距*/
-    width: 90%;
+    width: 93%;
     z-index: 1000;              /*确保在所有页面之上*/
-    background-color: rgb(226, 218, 208);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 /* 导航栏超链接 */
 header#site-header a {
     text-decoration: none;  /* 去掉超链接的下划线*/
     color:black;
-    position: relative; /*伪元素定位*/
 }
-
 
 /* 导航栏每一项的样式 */
 #site-header-dropdown{
@@ -46,7 +45,7 @@ header#site-header a {
 /* 城市描述文字样式 */
 #site-header-dropdown .dropdown-ex {
     font-size: 1rem;        /* 描述文字字体变小 */
-    color: #888;          /* 描述文字颜色变浅 */
+    color: #131212;          /* 描述文字颜色变浅 */
     text-align: center;     /* 水平居中对齐 */
     margin: 0;              /* 去掉默认外边距 */
     padding: 0;
@@ -83,7 +82,7 @@ header#site-header a {
 #site-header-search button {
     padding: 10px 15px;             /* 按钮内边距 */
     font-size: 1rem;                /* 按钮字体大小 */
-    background-color: #bace7f;      /* 按钮背景颜色 */
+    background-color: #c0c3ba;      /* 按钮背景颜色 */
     color: rgb(4, 4, 4);                   /* 按钮文字颜色 */
     border: none;                   /* 去掉按钮边框 */
     border-radius: 5px;             /* 圆角边框 */
