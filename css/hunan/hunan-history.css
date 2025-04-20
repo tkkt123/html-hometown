@@ -1,0 +1,93 @@
+/* 历史文化页面特有样式 */
+#hero {
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    position: relative;
+}
+
+.history-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.history-text {
+    flex: 1;
+}
+
+.history-image {
+    flex: 1;
+}
+
+.history-image img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.timeline {
+    margin-top: 30px;
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 4px solid var(--primary-color);
+}
+
+.airport-content{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.airport-text {
+    flex: 1;
+}
+.airport-image {
+    flex: 1;
+}
+
+.war-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.war-text {
+    flex: 1;
+}
+
+.war-image {
+    flex: 1;
+}
+
+.war-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
