@@ -29,3 +29,29 @@ document.addEventListener("DOMContentLoaded", () => {
     // 初始化背景图片
     showSlide(currentIndex);
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll("#cq_slide .slide");
+    let currentIndex = 0;
+
+    // 显示指定的幻灯片
+    function showSlide(index) {
+        slides[currentIndex].classList.remove("active1"); // 隐藏当前图片
+        currentIndex = (index + slides.length) % slides.length; // 确保索引在范围内
+        slides[currentIndex].classList.add("active1"); // 显示下一张图片
+    }
+
+    // 上一张
+    document.querySelector(".prev").addEventListener("click", () => {
+        showSlide(currentIndex - 1);
+    });
+
+    // 下一张
+    document.querySelector(".next").addEventListener("click", () => {
+        showSlide(currentIndex + 1);
+    });
+
+    // 自动切换
+    setInterval(() => {
+        showSlide(currentIndex + 1);
+    }, 3000); // 每隔 3 秒切换一次
+});
