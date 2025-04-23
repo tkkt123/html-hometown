@@ -100,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 case "自然风光":
                     window.location.href = "./hunan-else/hunan-nature.html";
                     break;
+                case "特色建筑":
+                    window.location.href = "./hunan-else/hunan-architecture.html";
+                    break;
             }
         });
     });

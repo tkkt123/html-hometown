@@ -59,6 +59,7 @@
     border: 4px solid var(--primary-color);
 }
 
+
 .airport-content{
     display: flex;
     gap: 50px;
@@ -91,3 +92,4 @@
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 }
+

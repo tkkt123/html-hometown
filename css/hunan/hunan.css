@@ -414,6 +414,7 @@ img {
     overflow: hidden;
     box-shadow: var(--box-shadow);
     cursor: pointer;
+    /*宽高比*/
     aspect-ratio: 3/2;
 }
 
