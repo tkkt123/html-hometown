@@ -5,6 +5,10 @@
     overflow: hidden;
     transition: var(--transition);
     margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .architecture-card:hover {
@@ -12,10 +16,14 @@
 }
 
 .architecture-card img {
-    width: 100%;
+    width: 80%;
     height: 250px;
     object-fit: cover;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
 }
+
+
 
 .architecture-info {
     padding: 20px;

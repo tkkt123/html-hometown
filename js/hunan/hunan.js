@@ -92,16 +92,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const text = this.querySelector('h4');
             switch(text.textContent.trim()) {
                 case "历史文化":
-                    window.location.href = "./hunan-else/hunan-history.html";
+                    window.location.href = "./hunan-history.html";
                     break;
                 case "特色美食":
-                    window.location.href = "./hunan-else/hunan-food.html";
+                    window.location.href = "./hunan-food.html";
                     break;
                 case "自然风光":
-                    window.location.href = "./hunan-else/hunan-nature.html";
+                    window.location.href = "./hunan-nature.html";
                     break;
                 case "特色建筑":
-                    window.location.href = "./hunan-else/hunan-architecture.html";
+                    window.location.href = "./hunan-architecture.html";
                     break;
             }
         });
@@ -122,169 +122,169 @@ document.addEventListener('DOMContentLoaded', function() {
     // 图集
     const galleryData = [
         {
-            src: "../images/HuNan/我爱芷江.jpg",
+            src: "../../images/HuNan/我爱芷江.jpg",
             title: "我爱芷江墙",
             desc: "在芷江风雨桥畔，一面写有\"我爱芷江\"的彩绘墙格外醒目。这面充满地域特色的文化墙，以鲜艳的色彩和质朴的标语，与古朴的风雨桥相映成趣，成为游客打卡的热门景点。墙上绘的侗族风情图案与\"我爱芷江\"的深情告白，既展现了当地少数民族文化，又传递着芷江人民对家乡的热爱。每当夕阳西下，暖光洒在墙面上，为这座历史悠久的侗乡小城增添了一抹温暖的现代气息。",
             category: "landscape"
         },
         {
-            src: "../images/HuNan/桥下灯笼.jpg",
+            src: "../../images/HuNan/桥下灯笼.jpg",
             title: "河边灯笼",
             desc: "在风雨桥旁的河边，吊脚楼下，夜景很好看的，有时还有雾，老梦幻了。",
             category: "landscape"
         },
         {
-            src: "../images/HuNan/路牌1.jpg",
+            src: "../../images/HuNan/路牌1.jpg",
             title: "路牌",
             desc: "桥边路牌，指引方向，充满地方特色。",
             category: "landscape"
         },
         {
-            src: "../images/HuNan/路牌2.jpg",
+            src: "../../images/HuNan/路牌2.jpg",
             title: "路牌",
             desc: "桥边路牌，记录着历史与文化的交汇。",
             category: "landscape"
         },
         {
-            src: "../images/HuNan/银杏.jpg",
+            src: "../../images/HuNan/银杏.jpg",
             title: "银杏树",
             desc: "好看的银杏树，秋天金黄一片，美不胜收。",
             category: "landscape"
         },
         {
-            src: "../images/HuNan/芷江鸭2.jpg",
+            src: "../../images/HuNan/芷江鸭2.jpg",
             title: "芷江鸭",
             desc: "芷江鸭是湖南省芷江侗族自治县的传统美食，以其独特的腌制和烹饪工艺而闻名。来芷江游玩，没有吃芷江鸭，就相当于没来。",
             category: "food"
         },
         {
-            src: "../images/HuNan/酸萝卜.jpg",
+            src: "../../images/HuNan/酸萝卜.jpg",
             title: "酸萝卜",
             desc: "一绝好吧，我很挑食的，不吃任何形式的萝卜，除了这个，还必须是这个，先放在面里面的那种小粒的酸萝卜，我也不吃。",
             category: "food"
         },
         {
-            src: "../images/HuNan/鸭肉粉.jpg",
+            src: "../../images/HuNan/鸭肉粉.jpg",
             title: "鸭肉粉",
             desc: "嗦粉党必尝啊，鸭肉粉是芷江的特色美食之一，通常由米粉、鸭肉、豆芽等配料组成，汤底鲜美，口感滑嫩。",
             category: "food"
         },
         {
-            src: "../images/HuNan/酸汤鱼.jpg",
+            src: "../../images/HuNan/酸汤鱼.jpg",
             title: "酸汤鱼",
             desc: "酸汤鱼是芷江的传统美食，采用新鲜的鱼和独特的酸汤调料，味道鲜美，酸辣可口。",
             category: "food"
         },
         {
-            src: "../images/HuNan/糖油粑粑.jpg",
+            src: "../../images/HuNan/糖油粑粑.jpg",
             title: "糖油粑粑",
             desc: "糖油粑粑是芷江的传统小吃，外脆内软，甜而不腻，是当地人喜爱的美食之一。",
             category: "food"
         },
         {
-            src: "../images/HuNan/社饭.jpg",
+            src: "../../images/HuNan/社饭.jpg",
             title: "社饭",
             desc: "社饭是芷江的传统美食，通常由糯米、肉类和各种配料蒸制而成，口感香糯，味道独特。",
             category: "food"
         },
         {
-            src: "../images/HuNan/凉粉.jpg",
+            src: "../../images/HuNan/凉粉.jpg",
             title: "冰凉粉",
             desc: "凉粉是芷江的传统小吃，通常由绿豆淀粉制成，口感滑嫩，配上特制的调料，清爽可口。",
             category: "food"
         },
         {
-            src: "../images/HuNan/黄雀.jpg",
+            src: "../../images/HuNan/黄雀.jpg",
             title: "香酥网油卷",
             desc: "以“猪网油”裹以红薯淀粉、鸡蛋等经过三道油炸工序制作而成，色泽金黄，外酥里嫩，入口香脆，回味无穷。",
             category: "food"
         },
         {
-            src: "../images/HuNan/臭豆腐.jpg",
+            src: "../../images/HuNan/臭豆腐.jpg",
             title: "臭豆腐",
             desc: "芷江的臭豆腐，外酥内嫩，香味浓郁，令人垂涎。",
             category: "food"
         },
         {
-            src: "../images/HuNan/粉蒸.jpg",
+            src: "../../images/HuNan/粉蒸.jpg",
             title: "粉蒸",
             desc: "粉蒸菜是芷江的经典美食，口感软糯，香气扑鼻。",
             category: "food"
         },
         {
-            src: "../images/HuNan/叶子粑.jpg",
+            src: "../../images/HuNan/叶子粑.jpg",
             title: "桐叶粑粑",
             desc: "桐叶粑粑是芷江的传统小吃，外皮柔软，内馅香甜，深受当地人喜爱。",
             category: "food"
         },
         {
-            src: "../images/HuNan/冰糖柑.jpg",
+            src: "../../images/HuNan/冰糖柑.jpg",
             title: "冰糖柑",
             desc: "冰糖柑是芷江特产，果肉鲜嫩多汁，酸甜适中，是当地人喜爱的水果之一。",
             category: "food"
         },
         {
-            src: "../images/HuNan/抗战胜利75.jpg",
+            src: "../../images/HuNan/抗战胜利75.jpg",
             title: "文化活动",
             desc: "抗战胜利75周年纪念活动在芷江举行，吸引了众多游客和当地居民参与。活动中有丰富的文艺表演、传统民俗展示以及抗战历史的回顾，旨在弘扬爱国主义精神，铭记历史，珍惜和平。",
             category: "culture"
         },
         {
-            src: "#",
+            src: "../../images/HuNan/和平节.jpg",
             title: "和平节",
             desc: "以和平著称的芷江，必然少不了和平主题的节日。",
             category: "culture"
         },
         {
-            src: "../images/HuNan/沈从文.jpg",
+            src: "../../images/HuNan/沈从文.jpg",
             title: "沈从文",
             desc: "沈从文在芷江当过一段时间的税务员，虽然大多数人认为《边城》的原型是茶峒古镇，但是作为看了《边城》，某些片段（blue~）有点太像芷江了。",
             category: "people"
         },
         {
-            src: "../images/HuNan/李梓萌.jpg",
+            src: "../../images/HuNan/李梓萌.jpg",
             title: "李梓萌",
             desc: "索子街街长！地位崇高。",
             category: "people"
         },
         {
-            src: "../images/HuNan/风雨桥-长.jpg",
+            src: "../../images/HuNan/风雨桥-长.jpg",
             title: "风雨桥",
             desc: "绝对不能错过的景点，去芷江不去风雨桥，纯纯sb。",
             category: "architecture"
         },
         {
-            src: "../images/HuNan/抗日战争纪念馆.jpg",
+            src: "../../images/HuNan/抗日战争纪念馆.jpg",
             title: "抗日战争纪念馆",
             desc: "纪念抗日战争胜利，铭记历史，珍惜和平。",
             category: "architecture"
         },
         {
-            src: "../images/HuNan/夏景.jpg",
+            src: "../../images/HuNan/夏景.jpg",
             title: "夏景",
             desc: "芷江的夏天，绿意盎然，生机勃勃。",
             category: "season"
         },
         {
-            src: "../images/HuNan/黄昏.jpg",
+            src: "../../images/HuNan/黄昏.jpg",
             title: "黄昏",
             desc: "芷江的黄昏，夕阳西下，景色迷人。",
             category: "season"
         },
         {
-            src: "../images/HuNan/春景.jpg",
+            src: "../../images/HuNan/春景.jpg",
             title: "春景",
             desc: "春天的芷江，百花齐放，春意盎然。",
             category: "season"
         },
         {
-            src: "../images/HuNan/秋景.jpg",
+            src: "../../images/HuNan/秋景.jpg",
             title: "秋景",
             desc: "秋天的芷江，金黄一片，丰收的季节。",
             category: "season"
         },
         {
-            src: "../images/HuNan/冬景.jpg",
+            src: "../../images/HuNan/冬景.jpg",
             title: "冬景",
             desc: "冬天的芷江，银装素裹，别有一番风味。",
             category: "season"
@@ -487,8 +487,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
-    
     //关闭按钮
     closeModal.addEventListener('click', function() {
         modal.style.display = 'none';
