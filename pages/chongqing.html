@@ -4,31 +4,98 @@
         <title>画廊</title>
         <meta charset="utf-8">
         <script src="../js/main.js"></script>
-        <link href="../css/style.css">
+        <script src="../js/chongqing/ctrl.js"></script>
+        <script src="../js/header.js"></script>
+        <script src="../js/interaction.js" ></script>
+        <link href="../css/header.css" type="text/css" rel="stylesheet">
+        <link href="../css/font.css" type="text/css" rel="stylesheet">
+        <link href="../css/style.css" type="text/css" rel="stylesheet">
+        <link href="../css/chongqing/chong_main.css" type="text/css" rel="stylesheet">
+        <link href="../css/chongqing/move.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div id="content">
-            <header id="site-header">
+            <header id="site-header" style="margin-left: 0%;">
                 <h1 id="site-header-name">
-                    <a href="index.html">
-                        南方画廊
-                    </a>
+                    <a href="index.html">南方画廊</a>
                 </h1>
-                <nav id="site-header-dropdown" style="display: flex; gap: 10px;">
+                <form id="site-header-search" action="/search" method="get">
+                    <input type="text" name="q" placeholder="搜索城市或者图片名称...">
+                    <button type="submit">搜索</button>
+                </form>
+                <nav id="site-header-dropdown">
                     <div>
-                        <a href="./chongqing.html">重庆</a>
+                        <a href="./chongqing.html">
+                            <div class="dropdown">重庆</div>
+                            <div class="dropdown-ex">山水之城</div>
+                        </a>
                     </div>
                     <div>
-                        <a href="/hunan.html">湖南</a>
+                        <a href="./hunan-else/hunan.html">
+                            <div class="dropdown">湖南</div>
+                            <div class="dropdown-ex">鱼米之乡</div>
+                        </a>
                     </div>
                     <div>
-                        <a href="/sichuan.html">四川</a>
+                        <a href="./sichuan.html">
+                            <div class="dropdown">四川</div>
+                            <div class="dropdown-ex">天府之国</div>
+                        </a>
                     </div>
                     <div>
-                        <a href="/jiangsu.html">江苏</a>
+                        <a href="./jiangsu.html">
+                            <div class="dropdown">江苏</div>
+                            <div class="dropdown-ex">水韵之地</div>
+                        </a>
                     </div>
                 </nav>
             </header>
+            <main>
+                <section id="introduction" style="margin-top: 15%;">
+                    <h2>重庆印象</h2>
+                    <div class="intro-gallery">
+                        <img src="../images/ChongQing/chongqing_cityscape.jpg" alt="重庆城市风光" style="width: 100%; max-height: 400px; object-fit: cover;">
+                        <p>重庆，这座被誉为“山城”的城市，以其独特的地貌、多层次的城市结构和夜景闻名于世。夜幕降临，灯火辉煌的山水都市展现出令人惊艳的魅力。</p>
+                    </div>
+                </section>
+
+                <section id="location">
+                    <h2>地理位置与环境</h2>
+                    <p>重庆位于中国西南部，长江与嘉陵江交汇处，是中西部地区唯一的直辖市。地势以丘陵山地为主，气候属亚热带湿润气候，夏季炎热，冬季温和。城市沿江而建，桥梁众多，地形起伏大，被称为“8D魔幻城市”。</p>
+                    <img src="../images/ChongQing/map.jpg" alt="重庆地图" style="max-width: 100%; height: auto;">
+                </section>
+
+                <section id="scenery">
+                    <h2>风景名胜</h2>
+                    <p>重庆拥有丰富的自然风光和人文景观，包括著名的洪崖洞、解放碑、磁器口古镇和长江三峡。</p>
+                    <div class="gallery">
+                        <img src="../images/ChongQing/hyd.jpg" alt="洪崖洞" style="width: 30%; margin: 5px;">
+                        <img src="../images/ChongQing/jfb.jpg" alt="解放碑" style="width: 30%; margin: 5px;">
+                        <img src="../images/ChongQing/cqk.jpg" alt="磁器口古镇" style="width: 30%; margin: 5px;">
+                    </div>
+                </section>
+
+                <section id="food">
+                    <h2>重庆美食</h2>
+                    <p>重庆美食以麻辣著称，火锅、小面、串串香等均广受欢迎。地道的重庆火锅以其红油汤底、丰富食材和热辣口感闻名，体现了重庆人直爽豪放的性格。</p>
+                    <div class="gallery">
+                        <img src="../images/ChongQing/hotpot.jpg" alt="重庆火锅" style="width: 30%; margin: 5px;">
+                        <img src="../images/ChongQing/xiaomian.jpg" alt="重庆小面" style="width: 30%; margin: 5px;">
+                        <img src="../images/ChongQing/chuancx.jpg" alt="串串香" style="width: 30%; margin: 5px;">
+                    </div>
+                    <blockquote>
+                        “一锅红汤万千味，重庆火锅最销魂。”
+                    </blockquote>
+                </section>
+
+                <section id="culture">
+                    <h2>文化特色</h2>
+                    <p>重庆以其火锅文化闻名全国，同时也是巴渝文化的重要发源地。这里的人们热情好客，生活节奏快，夜生活丰富。</p>
+                    <blockquote>
+                        “重庆的火锅不仅是一种美食，更是一种文化的象征。”
+                    </blockquote>
+                </section>
+            </main>
         </div>
     </body>
 </html>

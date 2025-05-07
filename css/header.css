@@ -1,91 +1,123 @@
 /* 页顶部导航栏样式 */
-header#site-header{
+header#site-header {
     position: fixed;
-    display: flex;                  /* 页面布局*/
-    gap: 10px;                      /* 距离*/
-    justify-content: space-between; /* 标题和导航栏两端对齐 */
+    display: flex;                  /* 页面布局 */
+    gap: 10px;                      /* 元素间距 */
+    justify-content: space-between; /* 左右两端对齐 */
     align-items: center;            /* 垂直居中对齐 */
-    padding: 10px;                  /* 内边距 */
-    border: 2px solid #bfbebe;       /* 添加边框，宽度，颜色，实线*/
-    font-size: 1rem;                /* 字体大小*/
-    margin :calc(2vw);              /*页边距*/
+    padding: 10px 20px;             /* 内边距 */
+    border: 2px solid #bfbebe;      /* 边框样式 */
+    font-size: 1rem;
+    margin: 2vw;
     width: 93%;
-    z-index: 1000;              /*确保在所有页面之上*/
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    z-index: 1000;                  /* 确保在最上层 */
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);    /* 毛玻璃效果 */
+    border-radius: 12px;            /* 圆角美化 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 导航栏超链接 */
+/* 悬停时略变色，提升交互感 */
+header#site-header:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 超链接样式 */
 header#site-header a {
-    text-decoration: none;  /* 去掉超链接的下划线*/
-    color:black;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
 }
 
-/* 导航栏每一项的样式 */
-#site-header-dropdown{
-    display: flex; 
-    gap: calc(5vw);
+header#site-header a:hover {
+    color: #d12f2f;
+}
+
+/* 城市下拉导航栏 */
+#site-header-dropdown {
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #site-header-dropdown div {
-    margin: 10px;          /* 去掉默认的外边距 */
-    padding :0;
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
 }
-
 
 /* 城市名称样式 */
 #site-header-dropdown .dropdown {
-    font-size: 2rem;        /* 城市名称字体变大 */
-    font-weight: bold;      /* 加粗城市名称 */
-    text-align: center;     /* 水平居中对齐 */
-    margin: 0;              /* 去掉默认外边距 */
-    padding: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* 城市描述文字样式 */
 #site-header-dropdown .dropdown-ex {
-    font-size: 1rem;        /* 描述文字字体变小 */
-    color: #131212;          /* 描述文字颜色变浅 */
-    text-align: center;     /* 水平居中对齐 */
-    margin: 0;              /* 去掉默认外边距 */
-    padding: 0;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
 }
 
-/* 大标题 */
+/* 网站名称 */
 #site-header-name {
-    margin: 0;          /* 去掉默认的外边距 */
+    margin: 0;
     font-size: 3rem;
-    padding-left: calc(2vw); /* vw是页面长度的1%，根据视口宽度动态调整左内边距 */
+    padding-left: 2vw;
     text-align: center;
+    flex-shrink: 0;
 }
-
 
 /* 搜索框样式 */
 #site-header-search {
-    display: flex;                  /* 使用 Flexbox 布局 */
-    justify-content: center;        /* 水平居中 */
-    align-items: center;            /* 垂直居中 */
-    margin: 10px 0;                 /* 上下间距 */
-    gap: 10px;                      /* 输入框和按钮之间的间距 */
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
     max-width: 500px;
+    flex: 1;
 }
+
 #site-header-search input[type="text"] {
-    flex: 1;                        /* 输入框占据剩余空间 */
-    padding: 10px;                  /* 输入框内边距 */
-    font-size: 1rem;                /* 输入框字体大小 */
-    border: 1px solid #ccc;         /* 边框样式 */
-    min-width: 150px;               /* 设置输入框的最小宽度 */
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    min-width: 150px;
     color: black;
+    border-radius: 5px;
 }
 
 #site-header-search button {
-    padding: 10px 15px;             /* 按钮内边距 */
-    font-size: 1rem;                /* 按钮字体大小 */
-    background-color: #c0c3ba;      /* 按钮背景颜色 */
-    color: rgb(4, 4, 4);                   /* 按钮文字颜色 */
-    border: none;                   /* 去掉按钮边框 */
-    border-radius: 5px;             /* 圆角边框 */
-    cursor: pointer;                /* 鼠标悬停时显示手型 */
-    flex-shrink: 0;                 /* 防止按钮缩小 */
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #c0c3ba;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease;
+}
+
+#site-header-search button:hover {
+    background-color: #9ca199;
+}
+
+/* Reveal 初始状态 */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Reveal 可视时的状态 */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
