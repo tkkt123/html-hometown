@@ -1,0 +1,241 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --text-light: #7f8c8d;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'kaiti', sans-serif;
+    color: var(--text-color);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: var(--light-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.main-nav li a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.content-container {
+    padding: 20px;
+}
+
+.section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.section-info {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: var(--text-color);
+}
+
+.grid {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.premium-card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform var(--transition);
+    cursor: pointer;
+}
+
+.premium-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-category {
+    display: block;
+    font-size: 0.9em;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--light-color);
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 1200px;
+    min-height: 600px;
+    animation-name: zoom;
+    animation-duration: 0.3s;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 80%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.detail-content {
+    padding: 30px;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: var(--text-color);
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.personal-section {
+    text-align: center;
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 4rem 2rem;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+.personal-avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    border: 8px solid var(--light-color);
+    box-shadow: 0 0 32px rgba(41, 128, 185, 0.2);
+    transition: box-shadow var(--transition);
+}
+
+.personal-section:hover .personal-avatar {
+    box-shadow: 0 0 48px rgba(41, 128, 185, 0.3);
+}
+
+.personal-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.personal-title {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.photo-container {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    height: 500px; /* 固定高度，避免容器坍塌 */
+}
+
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* 自适应容器高度 */
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}

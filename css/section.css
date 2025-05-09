@@ -320,3 +320,128 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+
+:root {
+    --scjs-primary: #165DFF;
+    --scjs-secondary: #36CFC9;
+    --scjs-neutral: #F5F7FA;
+    --scjs-text-dark: #333;
+    --scjs-text-light: #fff;
+}
+
+/* 布局样式 */
+.scjs-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.scjs-container {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.scjs-title {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: bold;
+    color: var(--scjs-text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.scjs-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* 按钮样式 */
+.scjs-btn {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.scjs-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.scjs-btn.active {
+    background-color: var(--scjs-primary);
+    color: var(--scjs-text-light);
+}
+
+.scjs-btn:not(.active) {
+    background-color: var(--scjs-neutral);
+    color: var(--scjs-text-dark);
+}
+
+.scjs-content-container {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.scjs-content {
+    display: none;
+}
+
+.scjs-content.active {
+    display: block;
+    animation: scjs-fade-in 0.5s ease-in-out;
+}
+
+.scjs-content-image {
+    position: relative;
+    height: 80vh;
+    min-height: 300px;
+}
+
+.scjs-content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scjs-content-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    display: flex;
+    align-items: flex-end;
+}
+
+.scjs-content-text {
+    padding: 1.5rem;
+    color: var(--scjs-text-light);
+}
+
+.scjs-content-title {
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.scjs-content-desc {
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+/* 动画效果 */
+@keyframes scjs-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
