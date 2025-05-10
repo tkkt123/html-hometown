@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css">
     <link rel="stylesheet" href="./font/iconfont.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
     <style>
         @import url("../css/sichuan/nav.css");
 
@@ -17,6 +20,9 @@
 </head>
 
 <body>
+    <a href="./my_info.html" class="about-me-btn">
+        <i class="fa-solid fa-user"></i>
+    </a>
     <ul id="nav">
         <li class="slide1"></li>
         <li class="slide2"></li>
@@ -85,6 +91,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#3B82F6',
+              },
+            }
+          }
+        }
         // 获取 item 元素
         var items = document.getElementsByClassName('item');
         // 遍历每一个 item 元素
