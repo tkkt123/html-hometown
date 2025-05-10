@@ -49,7 +49,8 @@
 section#cq {
     position: relative;
     margin-top: 10%;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     height: 100vh; /* 改为视口高度适应 */
     min-height: 700px; /* 添加最小高度保证内容显示 */
     display: grid;
@@ -60,6 +61,8 @@ section#cq {
     background-position: center;
     transition: background-image 0.5s ease;
     overflow: hidden;
+    box-sizing: border-box;
+    background-size: contain;
 }
 
 #cq_pic {
@@ -77,6 +80,7 @@ section#cq {
 #cq_font {
     position: relative;
     z-index: 2;
+    left:150px;
     width: 600px;
     padding: 40px;
     background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(242,242,242,0.8) 100%);
@@ -86,10 +90,28 @@ section#cq {
 }
 
 #cq_font h2 {
+    display: flex;
     font-size: 4rem;
     margin: 0 20px 0 0;
     color: #333;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+#cq_font h2 a {
+    font-size: 2rem;
+    display: flex;           /* 使用flex布局 */
+    align-items: center;     /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    margin-left: auto;       /* 在flex容器中靠右对齐 */
+    padding: 0 15px;         /* 添加一些内边距 */
+    text-decoration: none;   /* 移除下划线 */
+    transition: all 0.3s ease; /* 添加过渡效果 */
+}
+
+/* 可以添加悬停效果 */
+#cq_font h2 a:hover {
+    color: #7d2ae8;         /* 悬停时改变颜色 */
+    transform: translateX(5px); /* 添加小动画 */
 }
 
 #cq_font span {
