@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>留言板</title>
+    <style>
+        @import "../css/sichuan/liuyanban.css";
+        
+    </style>
+</head>
+<body>
+    <a href="../pages/sichuan.html" class="back-button">
+        <span class="arrow"></span>
+    </a>
+    <div class="messages">
+        <h1>留言板</h1>
+        <div class="form">
+            <input type="text" placeholder="你的名字" id="username">
+            <textarea placeholder="留言内容" id="message" rows="4"></textarea>
+            <button id="submitbtn">留言</button>
+        </div>
+        <div id="messagesBoard">
+            <!-- 初始留言示例 -->
+            <div class="message">
+                <div class="message-info">
+                    <div class="info">
+                        <img src="https://picsum.photos/200/200?random=1" alt="用户头像">
+                        <strong>李白</strong>
+                    </div>
+                    <span>发布于2025/05/05 08:00:00</span>
+                </div>
+                <div class="content">
+                    蜀道之难，难于上青天！
+                </div>
+                <div class="delete-btn">
+                    <i class="fa fa-trash"></i>
+                </div>
+            </div>
+            <div class="message">
+                <div class="message-info">
+                    <div class="info">
+                        <img src="https://picsum.photos/200/200?random=2" alt="用户头像">
+                        <strong>不愿意透露姓名的xxx</strong>
+                    </div>
+                    <span>发布于2025/05/06 08:00:00</span>
+                </div>
+                <div class="content">
+                    终于写完了!!
+                </div>
+                <div class="delete-btn">
+                    <i class="fa fa-trash"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 提交事件
+        document.getElementById('submitbtn').addEventListener('click', function() {
+            submitMessage();
+        });
+        
+        // 按Enter键提交
+        document.getElementById('message').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                submitMessage();
+            }
+        });
+        
+        function submitMessage() {
+            const usernameInput = document.getElementById('username');
+            const messageInput = document.getElementById('message');
+            const username = usernameInput.value.trim() || '匿名用户';
+            const message = messageInput.value.trim();
+            
+            if (!message) {
+                showNotification('请输入留言内容', 'error');
+                return;
+            }
+            
+            const messagesBoard = document.getElementById('messagesBoard');
+            const newMessage = document.createElement('div');
+            newMessage.classList.add('message');
+            
+            // 生成随机头像
+            const randomId = Math.floor(Math.random() * 1000);
+            const avatarUrl = `https://picsum.photos/200/200?random=${randomId}`;
+            
+            newMessage.innerHTML = `
+                <div class="message-info">
+                    <div class="info">
+                        <img src="${avatarUrl}" alt="用户头像">
+                        <strong>${username}</strong>
+                    </div>
+                    <span>发布于${getCurrentTime()}</span>
+                </div>
+                <div class="content">
+                    ${formatMessage(message)}
+                </div>
+                <div class="delete-btn">
+                    <i class="fa fa-trash"></i>
+                </div>
+            `;
+            
+            // 添加删除功能
+            newMessage.querySelector('.delete-btn').addEventListener('click', function() {
+                deleteMessage(newMessage);
+            });
+            
+            messagesBoard.insertBefore(newMessage, messagesBoard.firstChild);
+            usernameInput.value = '';
+            messageInput.value = '';
+            
+            // 显示成功提示
+            showNotification('留言发布成功', 'success');
+            
+            // 滚动到顶部
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // 删除留言
+        function deleteMessage(element) {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'all 0.3s ease';
+            
+            setTimeout(() => {
+                element.remove();
+                showNotification('留言已删除', 'info');
+            }, 300);
+        }
+        
+        // 获取当前时间
+        function getCurrentTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const day = String(now.getDate()).padStart(2, '0');
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+        }
+        
+        // 格式化留言内容（转义HTML并保留换行）
+        function formatMessage(text) {
+            // 转义HTML特殊字符
+            const escapedText = text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+            
+            // 替换换行符为<br>
+            return escapedText.replace(/\n/g, '<br>');
+        }
+        
+        // 显示通知
+        function showNotification(message, type = 'info') {
+            // 创建通知元素
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            
+            // 设置样式
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.left = '50%';
+            notification.style.transform = 'translateX(-50%)';
+            notification.style.padding = '10px 20px';
+            notification.style.borderRadius = '5px';
+            notification.style.color = 'white';
+            notification.style.fontSize = '16px';
+            notification.style.zIndex = '100';
+            notification.style.opacity = '0';
+            notification.style.transition = 'opacity 0.3s ease';
+            
+            // 根据类型设置背景色
+            if (type === 'success') {
+                notification.style.backgroundColor = '#2ecc71';
+            } else if (type === 'error') {
+                notification.style.backgroundColor = '#e74c3c';
+            } else {
+                notification.style.backgroundColor = '#3498db';
+            }
+            
+            // 添加到页面
+            document.body.appendChild(notification);
+            
+            // 显示通知
+            setTimeout(() => {
+                notification.style.opacity = '1';
+            }, 10);
+            
+            // 自动隐藏
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

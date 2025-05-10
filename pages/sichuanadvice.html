@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创意邮差</title>
+    <style>
+        @import url("../css/sichuan/advice.css");
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <button id="back-button" onclick="window.location.href='./sichuan.html'">返回</button>
+    
+    <div class="background-slider">
+        <!-- 动态生成图片标签 -->
+    </div>
+    
+
+    <div id="wrapper">
+        <h1>SEND YOUR IDEA</h1>
+        <br><br><br>
+        <div id="form-wrapper">
+            <form>
+                <p>Hello, dear designer,</p>
+                <label for="message">Your idea:</label>
+                <textarea name="message" id="message" rows="10" cols="30"></textarea>
+
+                <p>BEST</p>
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+
+                <input type="submit" name="Submit" value="SEND IT!">
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+
+        
+        const slider = document.querySelector('.background-slider');
+        const numImages = 10;
+        let currentIndex = 0;
+
+        // 动态生成图片标签
+        for (let i = 1; i <= numImages; i++) {
+            const img = document.createElement('img');
+            img.src = `../images/Sichuan/advice/${i}.png`;
+            if (i === 1) {
+                img.classList.add('active');
+            }
+            slider.appendChild(img);
+        }
+
+        // 切换图片函数
+        function changeImage() {
+            const images = slider.querySelectorAll('img');
+            images[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % numImages;
+            images[currentIndex].classList.add('active');
+        }
+
+        // 定时切换图片
+        setInterval(changeImage, 2000);
+    </script>
+</body>
+
+</html>    

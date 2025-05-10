@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>四川美景</title>
+    <style>
+       @import "../css/sichuan/viewpoint.css";
+    </style>
+</head>
+
+<body>
+    <a href="../pages/sichuan.html" class="back-button">
+        <span class="arrow"></span>
+    </a>
+    <div class="title">
+        <p> 云牵蜀水万壑韵，心醉川风千嶂情。</p>
+    </div>
+    <div id="banner">
+        <div class="img-list img-wrapper">
+            <div class="img-box">
+                <div class="info">
+                    <h3>稻城亚丁</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/daochengyading1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>杜甫草堂</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/dufucaotang1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>都江堰</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/dujiangyan1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>贡嘎山</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/gonggashan1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>乐山大佛</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/leshandafo1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>墨石公园</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/moshigongyuan1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>三星堆</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/sanxingdui1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>四姑娘山</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/siguniangshan1.jpg" alt="">
+            </div>
+            <div class="img-box">
+                <div class="info">
+                    <h3>熊猫基地</h3>
+                </div>
+                <img src="../images/Sichuan/viewpoint/xiongmao1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button class="last btn">
+            <svg t="1686471404424" class="icon left" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="2373" width="128" height="128">
+                <path
+                    d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z"
+                    fill="" p-id="2374"></path>
+            </svg>
+        </button>
+        <button class="next btn">
+            <svg t="1686471404424" class="icon right" viewBox="0 0 1024 1024" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" p-id="2373" width="128" height="128">
+                <path
+                    d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z"
+                    fill="" p-id="2374"></path>
+            </svg>
+        </button>
+    </div>
+    <!-- 幕布 -->
+    <div class="overlay"></div>
+
+    <!-- 弹窗 -->
+    <div class="popup">
+        <img class="popup-image" src="" alt="景点详情">
+        <div class="img-switch-btn left">
+            <svg t="1686471404424" class="icon left" viewBox="0 0 1024 1024" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" p-id="2373" width="30" height="30">
+                <path
+                        d="M862.485 481.154H234.126l203.3-203.3c12.497-12.497 12.497-32.758 0-45.255s-32.758-12.497-45.255 0L135.397 489.373c-12.497 12.497-12.497 32.758 0 45.254l256.774 256.775c6.249 6.248 14.438 9.372 22.627 9.372s16.379-3.124 22.627-9.372c12.497-12.497 12.497-32.759 0-45.255l-203.3-203.301h628.36c17.036 0 30.846-13.81 30.846-30.846s-13.81-30.846-30.846-30.846z"
+                        fill="white" p-id="2374"></path>
+            </svg>
+        </div>
+        <div class="img-switch-btn right">
+            <svg t="1686471404424" class="icon right" viewBox="0 0 1024 1024" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg" p-id="2373" width="30" height="30">
+                <path
+                        d="M161.515 481.154H800l-203.3 203.3c-12.497 12.497 -12.497 32.758 0 45.255s32.758 12.497 45.255 0L928.603 489.373c12.497 -12.497 12.497 -32.758 0 -45.254l-256.774 -256.775c-6.249 -6.248 -14.438 -9.372 -22.627 -9.372s-16.379 3.124 -22.627 9.372c-12.497 12.497 -12.497 32.759 0 45.255l203.3 203.301H161.515c-17.036 0 -30.846 13.81 -30.846 30.846s13.81 30.846 30.846 30.846z"
+                        fill="white" p-id="2374"></path>
+            </svg>
+        </div>
+        <div class="image-page"></div> <!-- 页码显示元素 -->
+        <div class="popup-info">
+            <div class="poem"></div> <!-- 副标题 -->
+            <div class="description"></div> <!-- 描述 -->
+        </div>
+    </div>
+    <div class="background-overlay"></div>
+    <script>
+        const attractions = [
+            {
+                name: "稻城亚丁",
+                poem: "雪峰映湖凝仙气，稻城亚丁醉人间。",
+                description: "稻城亚丁，这片被雪山与圣湖环抱的净土，是蓝色星球上最后的秘境。央迈勇、仙乃日、夏诺多吉三座神山巍峨矗立，冰川融水汇聚成牛奶海、五色海，湖水如宝石镶嵌在高原草甸间，随光线变幻出奇幻色彩。徒步其间，雪山的冷峻与草甸的温柔交织，仿佛踏入云端的童话世界。",
+                image: ["../images/Sichuan/viewpoint/daochengyading1.jpg", "../images/Sichuan/viewpoint/daochengyading2.jpg","../images/Sichuan/viewpoint/daochengyading3.jpg"] // 示例图片地址，可替换为真实地址
+            },
+            {
+                name: "杜甫草堂",
+                poem: "诗圣茅屋藏古韵，浣花溪水润文心。",
+                description: "浣花溪畔，杜甫草堂的青瓦竹影间流淌着千年诗韵。唐代大诗人杜甫曾在此写下 “安得广厦千万间” 的忧国之句，如今古木参天，梅竹相映，茅屋、碑刻、回廊皆浸透着文人风骨。漫步红墙竹径，仿佛能听见历史的回声在风中低语。",
+                image: ["../images/Sichuan/viewpoint/dufucaotang1.jpg", "../images/Sichuan/viewpoint/dufucaotang2.jpg"]
+            },
+            {
+                name: "都江堰",
+                poem: "都江古堰润天府，千年功业镇狂澜。",
+                description: "岷江之畔，李冰父子的智慧结晶 —— 都江堰，以鱼嘴分水、飞沙堰溢洪、宝瓶口引水的精妙设计，驯服了咆哮的江水，滋养出天府之国的丰饶。伏龙观俯瞰奔涌的江水，二王庙香火缭绕，诉说着千年治水传奇。",
+                image: ["../images/Sichuan/viewpoint/dujiangyan1.jpg", "../images/Sichuan/viewpoint/dujiangyan2.jpg","../images/Sichuan/viewpoint/dujiangyan3.jpg","../images/Sichuan/viewpoint/dujiangyan4.jpg","../images/Sichuan/viewpoint/dujiangyan5.jpg","../images/Sichuan/viewpoint/dujiangyan6.jpg"]
+            },
+            {
+                name: "贡嘎山",
+                poem: "蜀山之王傲苍穹，雪峰映照云海中。",
+                description: "海拔 7508.9 米的贡嘎山，以 “蜀山之王” 的雄姿傲立天地间。其山体陡峭，冰川纵横，日照金山的壮丽景象震撼人心。云海翻涌时，群峰若隐若现，宛如仙境；夜幕降临时，星河垂落，与雪山交相辉映。",
+                image: ["../images/Sichuan/viewpoint/gonggashan1.jpg", "../images/Sichuan/viewpoint/gonggashan2.jpg","../images/Sichuan/viewpoint/gonggashan3.jpg"]
+            },
+            {
+                name: "乐山大佛",
+                poem: "弥勒临江佑三江，佛光普照佑众生。",
+                description: "岷江、青衣江、大渡河交汇处，71 米高的弥勒佛坐像临江而踞，眉眼慈悲，守护着三江平安。夜晚乘船夜游，光影勾勒出巨型睡佛轮廓，乐山大佛身披五彩袈裟，在梵音中苏醒，演绎着千年佛国的神秘与庄严。",
+                image: ["../images/Sichuan/viewpoint/leshandafo1.jpg", "../images/Sichuan/viewpoint/leshandafo2.jpg"]
+            },
+            {
+                name: "墨石公园",
+                poem: "墨石奇幻石林幽，四季幻彩映云丘。",
+                description: "川西高原上，墨石公园的糜棱岩石林如奇幻迷宫。岩石随季节变换颜色，春冬浅灰如墨，夏秋湛蓝似海，一日之内亦因湿度与光照呈现不同色泽。万剑穿空、水墨石林等景观形态各异，仿佛大地精心雕刻的艺术珍品。",
+                image: ["../images/Sichuan/viewpoint/moshigongyuan1.jpg", "../images/Sichuan/viewpoint/moshigongyuan2.jpg","../images/Sichuan/viewpoint/moshigongyuan3.jpg","../images/Sichuan/viewpoint/moshigongyuan4.jpg"]
+            },
+            {
+                name: "三星堆",
+                poem: "青铜纵目惊天下，神树凌霄探古幽。",
+                description: "三星堆的青铜文明，是古蜀王国留给世界的谜题。青铜纵目面具眼球外凸，双耳招展，似能洞察天地；青铜神树高达 3.96 米，枝桠间栖息神鸟，暗含 “十日神话”。这些造型奇特的文物，揭开了古蜀人神秘信仰的面纱。",
+                image: ["../images/Sichuan/viewpoint/sanxingdui1.jpg", "../images/Sichuan/viewpoint/sanxingdui2.jpg","../images/Sichuan/viewpoint/sanxingdui3.jpg"]
+            },
+            {
+                name: "四姑娘山",
+                poem: "四娘幺妹傲云端，雪山草甸映碧空。",
+                description: "幺妹峰、三姑娘山、二姑娘山、大姑娘山四座雪峰一字排开，如四位亭亭玉立的少女。双桥沟的红杉林、长坪沟的枯树滩、海子沟的高山湖泊，构成了 “东方阿尔卑斯” 的绝美画卷。登山者在此挑战极限，摄影师定格雪山与草甸的诗意碰撞。",
+                image: ["../images/Sichuan/viewpoint/siguniangshan1.jpg", "../images/Sichuan/viewpoint/siguniangshan2.jpg","../images/Sichuan/viewpoint/siguniangshan3.jpg"]
+            },
+            {
+                name: "熊猫基地",
+                poem: "熊猫憨态萌五洲，竹林深处乐无忧。",
+                description: "成都平原的竹林深处，大熊猫繁育研究基地是国宝的乐园。憨态可掬的大熊猫在树上慵懒打盹，幼崽在草坪上滚作一团，啃食竹叶的沙沙声与鸟鸣交织成自然乐章。基地不仅是保护科研的前沿，更是人与自然和谐共生的生动写照。",
+                image: ["../images/Sichuan/viewpoint/xiongmao1.jpg", "../images/Sichuan/viewpoint/xiongmao2.jpg","../images/Sichuan/viewpoint/xiongmao3.jpg"]
+            }
+        ];
+        let currentPopupImageIndex = 0; // 记录当前显示的图片索引
+        // 点击img-box的处理函数
+        function handleImgBoxClick(e) {
+            const imgBox = e.currentTarget;
+            const title = imgBox.querySelector('.info h3').textContent;
+            const attraction = attractions.find(item => item.name === title);
+
+            const overlay = document.querySelector('.overlay');
+            const popup = document.querySelector('.popup');
+            const popupImage = popup.querySelector('.popup-image');
+            const poemElement = popup.querySelector('.poem');
+            const descriptionElement = popup.querySelector('.description');
+            const imagePage = popup.querySelector('.image-page'); // 获取页码显示元素
+
+            currentPopupImageIndex = 0; // 重置图片索引
+            popupImage.src = attraction.image[currentPopupImageIndex]; // 设置为第一张图片
+            poemElement.textContent = attraction?.poem || "";
+            descriptionElement.innerHTML = attraction?.description.replace(/\n/g, '<br>');
+            // 显示当前页码和总页码
+            imagePage.textContent = ` 1 / ${attraction.image.length}`; 
+
+            overlay.style.display = "block";
+            popup.style.display = "flex";
+        }
+
+        //关闭弹窗的处理函数（点击幕布或弹窗外区域）
+        function closePopup() {
+            document.querySelector('.overlay').style.display = "none";
+            document.querySelector('.popup').style.display = "none";
+        }
+
+        const imgList = document.querySelector('.img-list');
+        const originalBoxes = document.querySelectorAll('.img-box'); // 原始9张图片
+        const btnGroup = document.querySelector('.btn-group');
+        const lastBtn = document.querySelector('.last');
+        const nextBtn = document.querySelector('.next');
+        const root = document.documentElement;
+
+        // 核心参数
+        const CLONE_COUNT = 4; // 克隆数量（前后各4个）
+        const postSpacing = parseFloat(getComputedStyle(root).getPropertyValue('--post-spacing'));
+        const postSize = parseFloat(getComputedStyle(root).getPropertyValue('--post-size'));
+        const itemWidth = postSize + postSpacing; // 单张图片+间距的总宽度
+        const totalOriginal = originalBoxes.length; // 原始9张
+        let currentIndex = 0; // 当前显示的原始图片索引（0-8）
+        const animationTime = 0.5;
+        let isAnimating = false;
+
+        // 初始化：克隆前后各4个元素
+        function init() {
+            // 克隆前4个原始元素（用于尾部循环）
+            const frontClones = Array.from(originalBoxes).slice(0, CLONE_COUNT).map(box => {
+                const clone = box.cloneNode(true);
+                clone.classList.add('front-clone');
+                return clone;
+            });
+
+            // 克隆后4个原始元素（用于头部循环）
+            const backClones = Array.from(originalBoxes).slice(-CLONE_COUNT).map(box => {
+                const clone = box.cloneNode(true);
+                clone.classList.add('back-clone');
+                return clone;
+            });
+
+            // 插入克隆元素：先插后克隆（头部），再插前克隆（尾部）
+            imgList.prepend(...backClones);
+            imgList.append(...frontClones);
+
+            // 初始位置：显示原始第1张（跳过前4个后克隆）
+            const initialOffset = (CLONE_COUNT) * itemWidth; // 前4个后克隆的宽度
+            imgList.style.transform = `translateX(-${initialOffset}vw)`;
+
+            // 显示按钮
+            setTimeout(() => {
+                btnGroup.style.opacity = '1';
+                btnGroup.style.bottom = '5%';
+            }, 1000);
+            const allImgBoxes = document.querySelectorAll('.img-box');
+            allImgBoxes.forEach(box => {
+                box.addEventListener('click', handleImgBoxClick);
+                // 鼠标悬停切换背景
+                box.addEventListener('mouseenter', () => {
+                    const hoverSrc = box.querySelector('img').src;
+                    backgroundOverlay.style.backgroundImage = `url('${hoverSrc}')`;
+                });
+                // 鼠标离开恢复默认背景
+                box.addEventListener('mouseleave', () => {
+                    setDefaultBackground();
+                });
+            });
+
+            // 绑定幕布的点击关闭事件
+            document.querySelector('.overlay').addEventListener('click', closePopup);
+            // 添加图片切换按钮点击事件
+            const leftBtn = document.querySelectorAll('.img-switch-btn.left');
+            const rightBtn = document.querySelectorAll('.img-switch-btn.right');
+            const imagePage = document.querySelectorAll('.image-page');
+
+            leftBtn.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const popup = document.querySelector('.popup');
+                const popupImage = popup.querySelector('.popup-image');
+                const title = popup.querySelector('.poem').textContent;
+                const attraction = attractions.find(item => item.poem === title);
+                const totalImages = attraction.image.length;
+
+                // 处理边界情况，确保currentPopupImageIndex在0到totalImages - 1之间
+                currentPopupImageIndex = (currentPopupImageIndex - 1 + totalImages) % totalImages;
+                popupImage.src = attraction.image[currentPopupImageIndex];
+
+                // 获取页码显示元素，确保正确获取单个元素
+                const imagePage = document.querySelector('.image-page'); 
+                if (imagePage) {
+                    imagePage.textContent = `${currentPopupImageIndex + 1} / ${totalImages}`; 
+                }
+            });
+        });
+
+        rightBtn.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const popup = document.querySelector('.popup');
+                const popupImage = popup.querySelector('.popup-image');
+                const title = popup.querySelector('.poem').textContent;
+                const attraction = attractions.find(item => item.poem === title);
+                const totalImages = attraction.image.length;
+
+                // 处理边界情况，确保currentPopupImageIndex在0到totalImages - 1之间
+                currentPopupImageIndex = (currentPopupImageIndex + 1) % totalImages;
+                popupImage.src = attraction.image[currentPopupImageIndex];
+
+                // 获取页码显示元素，确保正确获取单个元素
+                const imagePage = document.querySelector('.image-page'); 
+                if (imagePage) {
+                    imagePage.textContent = `${currentPopupImageIndex + 1} / ${totalImages}`; 
+                }
+            });
+        });
+            // 获取背景元素并初始化默认背景
+            const backgroundOverlay = document.querySelector('.background-overlay');
+
+            // 设置默认背景的函数（根据 currentIndex）
+            function setDefaultBackground() {
+                const defaultImgBox = originalBoxes[currentIndex]; // 使用原始图片（避免克隆元素干扰）
+                const defaultSrc = defaultImgBox.querySelector('img').src;
+                backgroundOverlay.style.backgroundImage = `url('${defaultSrc}')`;
+            }
+
+            // 初始化默认背景
+            setDefaultBackground();
+        }
+        function setBackgroundImg() {
+            const backgroundOverlay = document.querySelector('.background-overlay');
+            // 获取当前索引对应的原始图片盒子（避免克隆元素干扰）
+            const currentImgBox = originalBoxes[currentIndex];
+            // 获取当前图片的 src 地址
+            const currentImgSrc = currentImgBox.querySelector('img').src;
+            // 设置背景图（自动应用已有的 0.4 模糊和过渡效果）
+            backgroundOverlay.style.backgroundImage = `url('${currentImgSrc}')`;
+        }
+        // 上一张逻辑
+        function prev() {
+            if (isAnimating) return;
+            isAnimating = true;
+            currentIndex--;
+
+            // 计算需要滚动的总偏移量（当前索引 + 后克隆数量）
+            const offset = (currentIndex + CLONE_COUNT) * itemWidth;
+            imgList.style.transition = `${animationTime}s ease`;
+            imgList.style.transform = `translateX(-${offset}vw)`;
+
+            // 边界处理：当当前索引小于0时（滚动到后克隆区域）
+            if (currentIndex < 0) {
+                setTimeout(() => {
+                    // 无过渡跳转到原始末尾（currentIndex=8）
+                    currentIndex = totalOriginal - 1;
+                    const resetOffset = (currentIndex + CLONE_COUNT) * itemWidth;
+                    imgList.style.transition = 'none';
+                    imgList.style.transform = `translateX(-${resetOffset}vw)`;
+                }, animationTime * 1000);
+            }
+            setBackgroundImg(); 
+            isAnimating = false;
+        }
+
+        // 下一张逻辑
+        function next() {
+            if (isAnimating) return;
+            isAnimating = true;
+            currentIndex++;
+
+            // 计算需要滚动的总偏移量（当前索引 + 后克隆数量）
+            const offset = (currentIndex + CLONE_COUNT) * itemWidth;
+            imgList.style.transition = `${animationTime}s ease`;
+            imgList.style.transform = `translateX(-${offset}vw)`;
+
+            // 边界处理：当当前索引超过原始数量时（滚动到前克隆区域）
+            if (currentIndex >= totalOriginal) {
+                setTimeout(() => {
+                    // 无过渡跳转到原始开头（currentIndex=0）
+                    currentIndex = 0;
+                    const resetOffset = (currentIndex + CLONE_COUNT) * itemWidth;
+                    imgList.style.transition = 'none';
+                    imgList.style.transform = `translateX(-${resetOffset}vw)`;
+                }, animationTime * 1000);
+            }
+            setBackgroundImg(); 
+            isAnimating = false;
+        }
+
+        function throttle(fn, delay) {
+            let timer = null;
+            return function() {
+                if (timer) return;
+                fn.apply(this, arguments);
+                timer = setTimeout(() => {
+                    timer = null;
+                }, delay);
+            };
+        }
+
+        // 初始化轮播
+        init();
+
+        // 绑定事件（保留原有节流逻辑）
+        lastBtn.addEventListener('click', throttle(prev, animationTime * 1000));
+        nextBtn.addEventListener('click', throttle(next, animationTime * 1000));
+    </script>
+</body>
+
+</html>
+    

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的家乡————四川</title>
+    <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap">
+    <style>
+        @import url("../css/sichuan/nav.css");
+
+        
+
+    </style>
+</head>
+
+<body>
+    <ul id="nav">
+        <li class="slide1"></li>
+        <li class="slide2"></li>
+        <li><a href="./index.html"> Home</a></li>
+        <li><a href="./chongqing.html"> Chongqing</a></li>
+        <li><a href="./hunan.html"> Hunan</a></li>
+        <li><a href="./jiangsu.html"> Jiangsu</a></li>
+    </ul>
+
+    <div class="shell">
+        <div class="shell_body">
+            <div class="button">
+                <div class="prev"><i class="iconfont icon-backward_filled"></i></div>
+                <div class="next"><i class="iconfont icon-forward_filled"></i></div>
+            </div>
+            <div class="shell_slider">
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front"></div>
+                        <h1 >留言板</h1>
+                        <span>留下你的评论</span>
+                        <div class="box left"></div>
+                        <div class="box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front"></div>
+                        <h1>四川美食</h1>
+                        <span>巴山蜀水麻辣韵，千载炊烟百味香</span>
+                        <div class="box left"></div>
+                        <div class="box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front"></div>
+                        <h1>四川景色</h1>
+                        <span>翠海金顶揽云悠，都江古堰映月流</span>
+                        <div class="box left"></div>
+                        <div class="box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front"></div>
+                        <h1>四川城市</h1>
+                        <span>智造双城腾巨浪，蜀道欧亚越千秋</span>
+                        <div class="box left"></div>
+                        <div class="box right"></div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="frame">
+                        <div class="box front"></div>
+                        <h1>快来给出你的意见吧！</h1>
+                        <span>你眼中的四川or你有新的创意！</span>
+                        <div class="box left"></div>
+                        <div class="box right"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+        // 获取 item 元素
+        var items = document.getElementsByClassName('item');
+        // 遍历每一个 item 元素
+        for (var i = 0; i < items.length; i++) {
+            var item = items[i];
+            var frame = item.getElementsByClassName('frame')[0];
+            var frontbox = item.getElementsByClassName('box front')[0];
+            var leftbox = item.getElementsByClassName('box left')[0];
+            var rightbox = item.getElementsByClassName('box right')[0];
+            // 设置背景
+            frontbox.style.backgroundImage = 'url(../images/Sichuan/main/' + (i + 1) + '.png)';
+            leftbox.style.backgroundImage = 'url(../images/Sichuan/main/' + (i + 1) + '.png)';
+            rightbox.style.backgroundImage = 'url(../images/Sichuan/main/' + (i + 1) + '.png)';
+        }
+        var itemLinks = [
+            "sichuanliuyanban.html",   // 第一个 item（四川历史）
+            "sichuanfood.html",      // 第二个 item（四川美食）
+            "sichuanviewpoint.html", // 第三个 item（四川景色）
+            "sichuancity.html",      // 第四个 item（四川发展）
+            "sichuanadvice.html"     // 第五个 item（你眼中的四川）
+        ];
+
+        $(items).on({
+            'click': function() {
+                var index = $(this).index(); // 获取当前 item 的索引（从 0 开始）
+                window.location.href = itemLinks[index]; // 跳转至对应的链接
+            },
+            // 鼠标移入/移出动画保持不变
+            'mouseover': function() {
+                gsap.to(this, { scale: 1.1, duration: 0.3, ease: 'power2.out' });
+            },
+            'mouseout': function() {
+                gsap.to(this, { scale: 1, duration: 0.3, ease: 'power2.in' });
+            }
+        });
+        function checkVisibility(frame) {
+            var style = window.getComputedStyle(frame);
+            var matrix = new DOMMatrixReadOnly(style.transform);
+            var angle = Math.round(Math.atan2(matrix.m21, matrix.m11) * (180 / Math.PI));
+
+            var leftBox = frame.querySelector('.box.left');
+            var rightBox = frame.querySelector('.box.right');
+
+            // 优化角度判断逻辑
+            if (angle >= -45 && angle <= 45) {
+                leftBox.style.display = 'block';
+                rightBox.style.display = 'block';
+            } else {
+                leftBox.style.display = 'none';
+                rightBox.style.display = 'none';
+            }
+        }
+
+        (function () {
+            "use strict";
+            var shell = document.getElementsByClassName('shell')[0];
+            var shell_slider = document.getElementsByClassName('shell_slider')[0];
+            var items = document.getElementsByClassName('item');
+            var prevbtn = document.getElementsByClassName('prev')[0];
+            var nextbtn = document.getElementsByClassName('next')[0];
+            // 定义变量
+            var width, height, totalwidth, margin = 20;
+            var curindex = 0;
+            var interval, intervalTime = 3000;
+
+            function init() {
+                resize();
+                move(Math.floor(items.length / 2));
+                bindEvents();
+                timer();
+            }
+
+            function resize() {
+                width = Math.max(window.innerWidth * 0.3, 455);
+                height = window.innerHeight * 0.6;
+                totalwidth = width * items.length;
+                // 设置 shell_slider 的宽度
+                shell_slider.style.width = totalwidth + 'px';
+                // 设置 item 的宽度和高度
+                for (var i = 0; i < items.length; i++) {
+                    var item = items[i];
+                    item.style.width = width - margin * 2 + 'px';
+                    item.style.height = height + 'px';
+                }
+            }
+
+            function bindEvents() {
+                window.onresize = resize;
+                prevbtn.addEventListener('click',() =>{prev();});
+                nextbtn.addEventListener('click',() =>{next();});
+            }
+            function move(index) {
+                // 修正循环索引
+                index = ((index - 1 + items.length) % items.length) + 1; // 确保索引在1~items.length之间
+                curindex = index;
+
+                // 计算真实索引（0-based）
+                const activeIndex = index - 1;
+                
+                // 更新所有item状态
+                for (let i = 0; i < items.length; i++) {
+                    const item = items[i];
+                    const frame = item.getElementsByClassName('frame')[0];
+                    
+                    if (i === activeIndex) {
+                        item.classList.add('item--active');
+                        frame.style.transform = "perspective(1200px)";
+                    } else {
+                        item.classList.remove('item--active');
+                        frame.style.transform = `perspective(1200px) rotateY(${
+                            i < activeIndex ? 40 : -40
+                        }deg)`;
+                    }
+                    checkVisibility(frame);
+                }
+
+                // 精确计算居中偏移量
+                const containerWidth = items.length * width;
+                const centerOffset = (activeIndex * width) + (width / 2) - (window.innerWidth / 2);
+                
+                // 边界修正：当第一个元素需要显示在左侧时
+                const maxOffset = containerWidth - window.innerWidth;
+                const finalOffset = Math.max(0, Math.min(centerOffset, maxOffset));
+                
+                shell_slider.style.transform = `translate3d(-${finalOffset}px, 0, 0)`;
+                
+                // 更新背景
+                const frontBox = items[activeIndex].getElementsByClassName('box front')[0];
+                document.body.style.backgroundImage = frontBox.style.backgroundImage;
+            }
+            function timer() {
+                clearInterval(interval);
+                interval = setInterval(() => {
+                    move(++curindex);
+                }, intervalTime);
+            }
+            // 切换 item
+            function prev() {
+                curindex = (curindex - 2 + items.length) % items.length + 1;
+                move(curindex);
+                timer();
+            }
+
+            function next() {
+                curindex = curindex % items.length + 1;
+                move(curindex);
+                timer();
+            }
+            init();
+
+            // 添加键盘支持
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') prev();
+                if (e.key === 'ArrowRight') next();
+            });
+
+            // 添加移动端触摸支持
+            let touchStartX = 0;
+            document.addEventListener('touchstart', e => {
+                touchStartX = e.touches[0].clientX;
+            });
+            
+            document.addEventListener('touchend', e => {
+                const touchEndX = e.changedTouches[0].clientX;
+                const diffX = touchStartX - touchEndX;
+                
+                if (Math.abs(diffX) > 50) {
+                    if (diffX > 0) next();
+                    else prev();
+                }
+            });
+        })();
+
+
+
+
+
+        $("#nav a").on("click", function(){
+            var position=$(this).parent().position();
+            var width=$(this).parent().width();
+            $("#nav .slide1").css({opacity:1, left: position.left, width:width});
+        });
+        $("#nav a").on("mouseover", function(){
+            var position=$(this).parent().position();
+            var width=$(this).parent().width();
+            $("#nav .slide2").css({opacity:1, left: position.left, width:width}).addClass("squeeze");
+        });
+        $("#nav a").on("mouseout", function(){
+            $("#nav .slide2").css({opacity:0}).removeClass("squeeze");
+        });
+
+        var currentWidth=$("#nav li:nth-of-type(3) a").parent("li").width();
+        var current =$("#nav li:nth-of-type(3) a").position();
+        $("#nav .slide1").css({left: current.left, width:currentWidth});
+
+    </script>
+</html>    

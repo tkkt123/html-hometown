@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <style>
+        @import url(../css/sichuan/food.css);
+    </style>
+</head>
+<body>
+    <a href="../pages/sichuan.html" class="back-button">
+        <span class="arrow"></span>
+    </a>
+    <div id="main">
+        <div id="click-section">
+            <div id="drawerboxes">
+                
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="0">
+                        <span class="btn-text">川味江湖</span>
+                        <span class="drawer-head">1</span>
+                    </button>
+                </div>
+                <!-- 火锅 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="1">
+                        <span class="btn-text">四川火锅</span>
+                        <span class="drawer-head">2</span>
+                    </button>
+                </div>
+                <!-- 担担面 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="2">
+                        <span class="btn-text">担担面</span>
+                        <span class="drawer-head">3</span>
+                    </button>
+                </div>
+                <!-- 双椒兔 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="3">
+                        <span class="btn-text">双椒兔</span>
+                        <span class="drawer-head">4</span>
+                    </button>
+                </div>
+                <!-- 香肠 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="4">
+                        <span class="btn-text">四川香肠</span>
+                        <span class="drawer-head">5</span>
+                    </button>
+                </div>
+                <!-- 凉糕 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="5">
+                        <span class="btn-text">凉糕</span>
+                        <span class="drawer-head">6</span>
+                    </button>
+                </div>
+                <!-- 龙抄手 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="6">
+                        <span class="btn-text">龙抄手</span>
+                        <span class="drawer-head">7</span>
+                    </button>
+                </div>
+                <!-- 宜宾燃面 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="7">
+                        <span class="btn-text">宜宾燃面</span>
+                        <span class="drawer-head">8</span>
+                    </button>
+                </div>
+                <!-- 折耳根 -->
+                <div class="drawerbox">
+                    <button class="drawer-btn" data-index="8">
+                        <span class="btn-text">折耳根</span>
+                        <span class="drawer-head">9</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="slide-section">
+            <div id="slider-bar">
+                <div id="bar"></div>
+            </div>
+            <div id="card-section">
+                <!-- 川味江湖 -->
+                <div id="card0" class="card">
+                    <div class="card-small-title">川味佳肴绽风华，麻辣鲜香传天下</div>
+                    <div class="card-title">川味江湖</div>
+                    <div class="card-content">
+                        四川美食个性鲜明，以麻辣为底色，凭借丰富食材与独特风味闻名。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/dazahui.jpg" alt="四川美食">
+                    </div>
+                </div>
+                <!-- 四川火锅 -->
+                <div id="card1" class="card">
+                    <div class="card-small-title">红汤沸煮香四溢，百味食材锅中聚</div>
+                    <div class="card-title">四川火锅</div>
+                    <div class="card-content">
+                        牛油锅底配椒辣，涮煮食材脆嫩麻辣，尽显川人豪迈。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/hotpot1.jpg" alt="四川火锅">
+                    </div>
+                </div>
+                <!-- 担担面 -->
+                <div id="card2" class="card">
+                    <div class="card-small-title">细面浇卤香飘散，红油增色韵悠长</div>
+                    <div class="card-title">担担面</div>
+                    <div class="card-content">
+                        细薄劲道面条，淋肉臊卤汁，配红油等料，满是川味风情。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/dandanmian1.jpg" alt="担担面">
+                    </div>
+                </div>
+                <!-- 双椒兔 -->
+                <div id="card3" class="card">
+                    <div class="card-small-title">双椒爆炒兔肉香，麻辣醇厚韵味强</div>
+                    <div class="card-title">双椒兔</div>
+                    <div class="card-content">
+                        仔兔配青红椒炒制，肉质滑嫩，麻辣浓郁，江湖菜经典。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/shuangjiaotu.jpg" alt="双椒兔">
+                    </div>
+                </div>
+                <!-- 四川香肠 -->
+                <div id="card4" class="card">
+                    <div class="card-small-title">肠衣裹肉辛香绕，麻辣咸鲜滋味妙</div>
+                    <div class="card-title">四川香肠</div>
+                    <div class="card-content">
+                        猪肉灌制熏制，口感紧实，麻辣咸香，川味经典美食。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/xiangchang.jpg" alt="四川香肠">
+                    </div>
+                </div>
+                <!-- 凉糕 -->
+                <div id="card5" class="card">
+                    <div class="card-small-title">凉糕嫩滑甜如蜜，红糖水润心惬意</div>
+                    <div class="card-title">凉糕</div>
+                    <div class="card-content">
+                        大米制凉糕，淋红糖水，口感细腻，消暑解腻的川味小吃。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/lianggao.jpg" alt="凉糕">
+                    </div>
+                </div>
+                <!-- 龙抄手 -->
+                <div id="card6" class="card">
+                    <div class="card-small-title">皮薄馅大汤汁鲜，抄手味美暖心田</div>
+                    <div class="card-title">龙抄手</div>
+                    <div class="card-content">
+                        元宝形抄手，肉馅鲜嫩，汤底鲜香，可清汤可红汤。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/longchaoshou.jpg" alt="龙抄手">
+                    </div>
+                </div>
+                <!-- 宜宾燃面 -->
+                <div id="card7" class="card">
+                    <div class="card-small-title">燃面油亮香气浓，芽菜花生味无穷</div>
+                    <div class="card-title">宜宾燃面</div>
+                    <div class="card-content">
+                        面条松散红亮，拌芽菜等料，筋道香辣，宜宾特色美食。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/yibingranmian.jpg" alt="宜宾燃面">
+                    </div>
+                </div>
+                <!-- 折耳根 -->
+                <div id="card8" class="card">
+                    <div class="card-small-title">折耳根叶异香绕，凉拌小炒风味妙</div>
+                    <div class="card-title">折耳根</div>
+                    <div class="card-content">
+                        气味独特的折耳根，可凉拌炒制，兼具食用与药用价值。
+                    </div>
+                    <div class="card-img">
+                        <img src="../images/Sichuan/food/zheergen.jpg" alt="折耳根">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let chosenSliderNumber = 0;
+        let totalSlides = 8; // 共9个卡片(0-8)
+        let intervalID;
+    
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            const drawerBtns = document.querySelectorAll('.drawer-btn');
+            // 绑定所有按钮点击事件
+            drawerBtns.forEach((btn, index) => {
+                btn.dataset.index = index; // 确保索引正确性
+                btn.addEventListener('click', () => {
+                    resetTimer();
+                    slideTo(index);
+                    // 自动滚动到对应导航项
+                    const drawerbox = btn.closest('.drawerbox');
+                    const container = document.querySelector('#drawerboxes');
+                    const topPos = drawerbox.offsetTop - container.offsetTop;
+                    container.scrollTo({
+                        top: topPos - 50, // 保持居中显示
+                        behavior: 'smooth'
+                    });
+                });
+            });
+    
+            // 幻灯片区域交互
+            const slideSection = document.querySelector('#slide-section');
+            slideSection.addEventListener('mouseenter', () => clearInterval(intervalID));
+            slideSection.addEventListener('mouseleave', startSlide);
+    
+            // 初始化第一个卡片
+            slideTo(0);
+            startSlide();
+        });
+    
+        // 计时器控制
+        function resetTimer() {
+            clearInterval(intervalID);
+            startSlide();
+        }
+    
+        // 主切换函数
+        function slideTo(slideNumber) {
+            // 边界控制
+            slideNumber = Math.max(0, Math.min(slideNumber, totalSlides));
+            
+            // 更新界面状态
+            drawerboxToggle(slideNumber);
+            drawerbtnToggle(slideNumber);
+            
+            // 计算偏移量
+            chosenSliderNumber = slideNumber;
+            const cardOffset = -(chosenSliderNumber * 100);
+            const barOffset = (chosenSliderNumber / totalSlides) * 100;
+    
+            // 执行动画
+            document.querySelector('#bar').style.transform = `translateY(${barOffset}%)`;
+            document.querySelectorAll('.card').forEach(slide => {
+                slide.style.transform = `translateY(${cardOffset}%)`;
+            });
+        }
+    
+        // 抽屉面板切换
+        function drawerboxToggle(drawerboxNumber) {
+            document.querySelectorAll('.drawerbox').forEach((box, index) => {
+                box.classList.toggle('active', index === drawerboxNumber);
+            });
+        }
+    
+        // 按钮状态切换
+        function drawerbtnToggle(drawerbtnNumber) {
+            document.querySelectorAll('.drawer-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const targetBtn = document.querySelector(`.drawer-btn[data-index="${drawerbtnNumber}"]`);
+            if(targetBtn) targetBtn.classList.add('active');
+        }
+    
+        // 自动轮播功能
+        function startSlide() {
+            clearInterval(intervalID);
+            intervalID = setInterval(() => {
+                let nextSlide = chosenSliderNumber + 1;
+                if(nextSlide > totalSlides) nextSlide = 0;
+                slideTo(nextSlide);
+            }, 5000); // 调整为5秒切换
+        }
+    </script>
+</body>
+</html>

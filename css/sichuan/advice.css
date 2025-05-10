@@ -1,0 +1,194 @@
+* {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: none;
+        }
+
+        body {
+            background: white;
+            color: black;
+            font-family: tahoma;
+            position: relative;
+            overflow: hidden;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        #wrapper {
+            width: 530px;
+            margin: 20px auto 0;
+            height: 1000px;
+            position: relative;
+            z-index: 3; /* 提高包裹层层级 */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 35px;
+            font-family: tahoma;
+            color: black;
+        }
+
+        #form-wrapper {
+            overflow: hidden;
+            height: 447px;
+            position: relative;
+            top: 0px;
+            transition: all 1s ease-in-out;
+        }
+
+        #form-wrapper:before {
+            content: "";
+            position: absolute;
+            bottom: 128px;
+            left: 0px;
+            background: url('../images/Sichuan/advice/before.png');
+            width: 530px;
+            height: 317px;
+        }
+
+        #form-wrapper:after {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            background: url('../images/Sichuan/advice/after.png');
+            width: 530px;
+            height: 259px;
+        }
+
+        #form-wrapper.hide::after,
+        #form-wrapper.hide::before {
+            display: none;
+        }
+
+        #form-wrapper:hover {
+            height: 777px;
+            top: -200px;
+        }
+
+        form {
+            background: white;
+            position: relative;
+            top: 200px;
+            overflow: hidden;
+            height: 200px;
+            width: 400px;
+            margin: 0px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: all 1s ease-in-out .3s;
+        }
+
+        #form-wrapper:hover form {
+            height: 530px;
+        }
+
+        label {
+            margin: 11px 20px 0 0;
+            font-size: 15px;
+            color: gray;
+            text-transform: uppercase;
+        }
+
+        input[type=text],
+        textarea {
+            font: 14px normal uppercase, arial, serif;
+            color: dimgray;
+            background: none;
+            width: 380px;
+            height: 37px;
+            padding: 0px 10px;
+            margin: 0 0 10px 0;
+            border: 1px solid #f8f5f1;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 80px;
+            padding-top: 14px;
+        }
+
+        textarea:focus,
+        input[type=text]:focus {
+            background: white;
+        }
+
+        #form-wrapper input[type=submit] {
+            position: relative;
+            font-family: tahoma;
+            font-size: 24px;
+            color: gray;
+            width: 100%;
+            text-align: center;
+            opacity: 0;
+            background: none;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: opacity 0.7s ease-in-out 0s;
+        }
+
+        #form-wrapper:hover input[type=submit] {
+            z-index: 1;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out 1.3s;
+        }
+
+        /* 背景轮播器样式 */
+        .background-slider {
+            z-index: -1; /* 保持背景在最底层 */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .background-slider img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        .background-slider::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(99, 99, 99, 0.7);
+            z-index: 1; /* 确保遮罩在背景图片上方 */
+        }
+        .background-slider img.active {
+            opacity: 1;
+        }
+
+
+
+        #back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgb(170,190,255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #back-button:hover {
+            background-color: rgba(170,190,255,0.5);
+        }
