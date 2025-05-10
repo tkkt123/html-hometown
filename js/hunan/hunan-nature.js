@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 滚动动画
     const featureItems = document.querySelectorAll('.feature-item');
     const riverListItems = document.querySelectorAll('.river-list li');
-    
     const natureObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

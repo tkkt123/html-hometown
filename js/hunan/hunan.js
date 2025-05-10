@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 设置当前年份
     document.getElementById('year').textContent = new Date().getFullYear();
     
-    // 导航栏滚动效果
+    // 导航栏滚动后颜色变淡
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -13,11 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // 平滑滚动
+    //a：表示选择 <a> 标签（超链接元素）。
+    //[href^="#"]：表示选择 href 属性的值以 # 开头的 <a> 标签。
+    //^=：表示属性值以指定字符串开头。$=:结尾
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            if (this.getAttribute('href') === '#') return;
             
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
@@ -27,10 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     top: targetElement.offsetTop - 80,
                     behavior: 'smooth'
                 });
-                
-                // 关闭移动菜单
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
             }
         });
     });
@@ -59,31 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     
-    // 技能条动画
-    const skills = document.querySelectorAll('.skill'); 
-    function animateSkills() {
-        skills.forEach(skill => {
-            const percent = skill.getAttribute('data-percent');
-            const progressBar = skill.querySelector('.skill-progress');
-            
-            progressBar.style.width = percent + '%';
-        });
-    }
-    
-    // 当技能部分进入视口时触发动画
-    const aboutSection = document.getElementById('about');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateSkills();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    observer.observe(aboutSection);
-
-
 
     //监听feature的点击事件-切换网页
     const features = document.querySelectorAll('.feature');
@@ -514,57 +486,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // 表单提交
-    const contactForm = document.getElementById('contactForm');
-    const subscribeForm = document.getElementById('subscribeForm');
     
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        
-        alert('感谢您的留言！我会尽快回复您。');
-        this.reset();
-    });
-    
-    subscribeForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        
-        alert('感谢订阅！您将收到我们的最新更新。');
-        this.reset();
-    });
-    
-    // 初始化地图 (需要替换为实际的地图API代码)
-    function initMap() {
-        // 这里需要替换为实际的地图初始化代码
-        // 示例使用Google Maps API:
-        /*
-        const map = new google.maps.Map(document.getElementById('map'), {
-            center: { lat: 你的纬度, lng: 你的经度 },
-            zoom: 12
-        });
-        
-        new google.maps.Marker({
-            position: { lat: 你的纬度, lng: 你的经度 },
-            map: map,
-            title: '我的家乡'
-        });
-        */
-        
-        // 如果没有地图API，可以显示一个占位图
-        const mapContainer = document.getElementById('map');
-        if (mapContainer && !mapContainer.hasChildNodes()) {
-            mapContainer.innerHTML = '<div style="width:100%;height:100%;display:flex;justify-content:center;align-items:center;background:#eee;color:#666;">地图位置</div>';
-        }
-    }
-    
-    // 如果地图API已加载，调用initMap
-    if (typeof google !== 'undefined') {
-        initMap();
-    } else {
-        // 如果没有加载地图API，也显示占位图
-        initMap();
-    }
-    
+
     // 页面加载动画
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
