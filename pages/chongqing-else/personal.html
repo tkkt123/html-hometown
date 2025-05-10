@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人开发者介绍页面">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>开发者轨迹 | 个人主页</title>
+    <link rel="stylesheet" href="../../css/chongqing/person.css">
+    <link rel="stylesheet" href="../../css/chongqing/person_font.css    ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 浮动导航 -->
+    <nav class="floating-nav">
+        <div id="f-nav">
+            <div><a href="#intro" data-tooltip="个人简介"><i class="fas fa-user"></i></a></div>
+            <div><a href="#resume" data-tooltip="成长履历"><i class="fas fa-file-alt"></i></a></div>
+            <div><a href="#hobbies" data-tooltip="兴趣爱好"><i class="fas fa-camera-retro"></i></a></div>
+            <div><a href="#thoughts" data-tooltip="技术思考"><i class="fas fa-code"></i></a></div></div>
+    </nav>
+
+    <!-- 3D 头部 -->
+    <header id="site-header" class="parallax-header">
+        <canvas id="header-canvas"></canvas>
+        <div class="header-content">
+            <h1 id="site-header-name" class="glitch">开发者轨迹</h1>
+            <div id="site-header-dropdown">
+                <div class="dropdown-card">
+                    <div class="dropdown-main">
+                        <i class="fas fa-mountain-city"></i>
+                        <span>山城之子</span>
+                    </div>
+                    <div class="dropdown-ex">重庆 · 8D魔幻之都</div>
+                </div>
+                <div class="dropdown-card">
+                    <div class="dropdown-main">
+                        <i class="fas fa-atom"></i>
+                        <span>技术追求</span>
+                    </div>
+                    <div class="dropdown-ex">吉大 · 计算机科学与技术</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content-grid">
+        <!-- 个人介绍 -->
+        <section class="reveal card-glass" id="intro">
+            <div class="section-header">
+                <h2><span class="highlight">自我</span>认知矩阵</h2>
+                <div class="tech-tags">
+                    <span>C++</span>
+                    <span>WebGL</span>
+                    <span>Node.js</span>
+                    <span>React</span>
+                </div>
+            </div>
+            <div class="profile-grid">
+                <div class="avatar-container">
+                    <div class="hologram-avatar"></div>
+                </div>
+                <div class="bio-content">
+                    <p class="typewriter">你好！我是<span class="gradient-text">全栈拓荒者</span>，在数字世界的两极（前端诗意 × 后端逻辑）间构建桥梁。当前掌握技术栈：</p>
+                    <div class="skill-meter">
+                        <div class="skill-bar" data-skill="C/C++" data-level="85"></div>
+                        <div class="skill-bar" data-skill="Web" data-level="70"></div>
+                        <div class="skill-bar" data-skill="System" data-level="60"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 增强版简历 -->
+        <section class="reveal timeline-section" id="resume">
+            <h2 class="timeline-title">成长时间线</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="timeline-content">
+                        <h3>2023 · 技术启航</h3>
+                        <ul class="tech-list">
+                            <li data-icon="🖥️">吉林大学计算机学院入学</li>
+                            <li data-icon="📚">完成C++核心语法体系构建</li>
+                            <li data-icon="🌐">Web开发启蒙：HTML5/CSS3</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div class="timeline-content">
+                        <h3>2024 · 全栈实践</h3>
+                        <div class="project-showcase">
+                            <div class="project-card">
+                                <div class="project-glow"></div>
+                                <h4>教务系统重构</h4>
+                                <p>采用React+Node.js技术栈实现前后端分离架构</p>
+                                <div class="project-tech">
+                                    <span>RESTful API</span>
+                                    <span>JWT认证</span>
+                                    <span>响应式设计</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 兴趣可视化 -->
+        <section class="reveal gallery-section" id="hobbies">
+            <h2>多维兴趣空间</h2>
+            <div class="hobby-grid">
+                <div class="hobby-card" data-hobby="photography">
+                    <div class="hobby-overlay">
+                        <h3>光影捕手</h3>
+                        <p>城市建筑 × 自然景观 × 人像摄影</p>
+                    </div>
+                </div>
+                <div class="hobby-card" data-hobby="music">
+                    <div class="hobby-visualizer"></div>
+                    <div class="hobby-overlay">
+                        <h3>数字音创</h3>
+                        <p>FL Studio × MIDI编程 × 电子合成</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技术思考 -->
+        <section class="reveal thought-section" id="thoughts">
+            <div class="code-wrapper">
+                <pre><code class="language-javascript">
+function frontendJourney() {
+    const design = new Aesthetic();
+    const logic = new Algorithm();
+    
+    while(true) {
+        design.inspire(logic);
+        logic.optimize(design);
+        console.log("创造完美用户体验");
+    }
+}
+                </code></pre>
+            </div>
+            <div class="thought-bubble">
+                <h2>技术哲思</h2>
+                <p>在前端宇宙中，每个像素都是逻辑与美学的平衡点...</p>
+                <div class="thought-interactive">
+                    <div class="thought-node" data-tech="CSS"></div>
+                    <div class="thought-node" data-tech="JS"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="../../js/chongqing/person.js" type="module"></script>
+</body>
+</html>

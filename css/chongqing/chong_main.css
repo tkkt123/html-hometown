@@ -28,7 +28,7 @@ main section {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #222;
     border-bottom: 2px solid #eee;
@@ -37,7 +37,7 @@ h2 {
 }
 
 p {
-    font-size: 1.1em;
+    font-size: 1.3em;
     max-width: 800px;
     margin: 10px auto;
     color: #555;
@@ -66,7 +66,7 @@ p {
 
 /* Blockquote */
 blockquote {
-    background-color: #f7f7f7;
+    background-color: #eceaea;
     padding: 20px;
     margin: 40px auto;
     border-left: 5px solid #d12f2f;
