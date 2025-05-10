@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // 设置当前年份
     document.getElementById('year').textContent = new Date().getFullYear();
     
+    // 页面开始文字加载动画
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.opacity = '0';
+        heroContent.style.animation = 'fadeInUp 1s ease 0.5s forwards';
+    }
+
     // 导航栏滚动后颜色变淡
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', function() {
@@ -471,7 +478,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = 'auto';
         }
     });
-
     //为每个存在的图片添加点击事件
     const modalImages = document.querySelectorAll('singal-slide img');
     modalImages.forEach(image => {
@@ -486,12 +492,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // 表单提交
-    
+    //???
 
-    // 页面加载动画
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        heroContent.style.opacity = '0';
-        heroContent.style.animation = 'fadeInUp 1s ease 0.5s forwards';
-    }
+
 });

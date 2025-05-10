@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 滚动动画
     const featureItems = document.querySelectorAll('.feature-item');
     const riverListItems = document.querySelectorAll('.river-list li');
+    //IntersectionObserver：用于监听目标元素是否进入视口。
     const natureObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {

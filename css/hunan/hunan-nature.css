@@ -139,7 +139,7 @@
     font-size: 1.1rem;
 }
 
-.river-list i {
+.river-list div {
     color: var(--primary-color);
     margin-right: 10px;
 }
