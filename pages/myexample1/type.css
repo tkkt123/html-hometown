@@ -1,0 +1,43 @@
+#searchBtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 5px;
+}
+
+#searchBtn:hover{
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#searchBtn:active{
+    background-color: #3e8e41;
+    transform: translateY(2px);
+}
+
+#ProInput,#CityInput{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#upcontainer{
+    margin-top: 20px; 
+    display: flex;
+    flex-direction: column;
+}
+
+li{
+    list-style: none;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 5px;
+}

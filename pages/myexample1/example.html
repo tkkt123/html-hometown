@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例网页</title>
+    <link rel="stylesheet" href="./type.css">
+</head>
+<body>
+    <div id="upcontainer">
+        <h3>省份名字：</h3>
+        <input type="text" name="province" placeholder="请输入省份名" id="ProInput">
+        <h3>城市名字：</h3>
+        <input type="text" name="city" placeholder="请输入城市名" id="CityInput">
+        <button type="submit" id="searchBtn">搜索</button>
+    </div>
+    <div id="showbox">
+        <p style="font-size: larger; "><b>城市列表:</b></p>
+        <ul id="box"></ul>
+    </div>
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js">
+</script>
+
+<script>
+    document.querySelector('#searchBtn').addEventListener('click', ()=>{        
+        let pName=document.querySelector('#ProInput').value;
+        let cName=document.querySelector('#CityInput').value;
+
+        if(pName.trim() === ''){
+            alert('请输入省份和城市名');
+            document.querySelector('#ProInput').focus();
+            return;
+        }else if(cName.trim() === ''){
+            alert('请输入城市名');
+            document.querySelector('#CityInput').focus();
+            return;
+        }
+
+        axios({
+            url:'http://hmajax.itheima.net/api/area',
+            method:'get',
+            params:{
+                pname:pName,
+                cname:cName
+            }
+        }).then(result=>{
+            let s=result.data.list.map(item=>
+                `<li>${item}</li>`
+            ).join('');
+            document.querySelector('#box').innerHTML=s;
+        })
+    })
+</script>
+</html>
